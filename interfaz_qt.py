@@ -61,7 +61,7 @@ class VisualizadorArbol(QWidget):
 
         agregar_nodos(arbol.raiz)
 
-        # Si no tienes pygraphviz, usa spring_layout
+      
         pos = nx.spring_layout(G)
 
         ax = self.canvas.figure.add_subplot(111)
@@ -71,7 +71,6 @@ class VisualizadorArbol(QWidget):
         self.canvas.draw()
 
 
-# 👇 Este bloque debe estar FUERA de cualquier clase o función
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     ventana = VisualizadorArbol()
